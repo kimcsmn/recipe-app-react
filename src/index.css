@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -8,7 +10,7 @@
 }
 
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "PT Sans", sans-serif;
   background-color: #fef7d7;
   color: #17171b;
 }
@@ -17,4 +19,45 @@ body {
   display: flex;
   justify-content: center;
   padding: 2em 1em;
+  flex-wrap: wrap;
+}
+
+.form {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 3em;
+}
+
+.form input {
+  width: 30vw;
+}
+
+.form button {
+  border: none;
+  padding: 10px 20px;
+}
+
+.Recipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe {
+  /* border: solid 3px #17171b; */
+  background-color: #17171b;
+  color: #fef7d7;
+  margin: 2em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.recipe-info {
+  padding: 1em 0;
+}
+
+.recipe img {
+  min-width: 100%;
+  min-height: 90%;
+  object-fit: contain;
 }

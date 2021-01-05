@@ -21,24 +21,26 @@ function App() {
 
     return(
       <div className="App">
-        <form>
+        <form className="form">
           <input type="text" />
           <button type="submit">Search</button>
         </form>
 
       {/* loop through recipes and each recipe will instantiate a Recipe component */}
-       {
+      <div className="Recipe">
+        {
          recipes.map(r => {
            return(
             <Recipe
              key={r.recipe.label}
-             name={r.recipe.label}
+             label={r.recipe.label}
              image={r.recipe.image}
              calories={r.recipe.calories}
            />
            )
          })
        }
+      </div>
 
       </div>
     )
