@@ -11,8 +11,8 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  background-color: #fef7d7;
-  color: #17171b;
+  background-color: #171717;
+  color: #fef7d7;
 }
 
 .App {
@@ -45,8 +45,9 @@ body {
 
 .recipe {
   /* border: solid 3px #17171b; */
-  background-color: #17171b;
-  color: #fef7d7;
+  background-color: #f4bc2b;
+  color: #17171b;
+  width: 350px;
   margin: 2em;
   text-align: center;
   overflow: hidden;
@@ -59,5 +60,6 @@ body {
 .recipe img {
   min-width: 100%;
   min-height: 90%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: bottom;
 }
