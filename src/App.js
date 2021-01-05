@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import Recipe from './components/Recipe';
 
 
 function App() {
@@ -25,6 +26,19 @@ function App() {
           <button type="submit">Search</button>
         </form>
 
+      {/* loop through recipes and each recipe will instantiate a Recipe component */}
+       {
+         recipes.map(r => {
+           return(
+            <Recipe
+             key={r.recipe.label}
+             name={r.recipe.label}
+             image={r.recipe.image}
+             calories={r.recipe.calories}
+           />
+           )
+         })
+       }
 
       </div>
     )
