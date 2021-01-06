@@ -58,6 +58,7 @@ function App() {
              key={r.recipe.label}
              label={r.recipe.label}
              image={r.recipe.image}
+             ingredients={r.recipe.ingredients}
              calories={r.recipe.calories}
            />
            )

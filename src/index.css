@@ -30,11 +30,20 @@ body {
 
 .form input {
   width: 30vw;
+  height: 100%;
+  border-radius: 1em 0 0 1em;
 }
 
 .form button {
   border: none;
   padding: 10px 20px;
+  background-color: #f4bc2b;
+  color: #171717;
+  border-radius: 0 1em 1em 0;
+}
+
+.form button:hover {
+  color: #fef7d7;
 }
 
 .Recipe {
@@ -48,6 +57,7 @@ body {
   background-color: #f4bc2b;
   color: #17171b;
   width: 350px;
+  height: fit-content;
   margin: 2em;
   text-align: center;
   overflow: hidden;
@@ -57,9 +67,22 @@ body {
   padding: 1em 0;
 }
 
+.recipe .image-container {
+  width: 100%;
+  height: 350px;
+}
+
 .recipe img {
-  min-width: 100%;
-  min-height: 90%;
+  width: 100%;
   object-fit: cover;
-  object-position: bottom;
+}
+
+.recipe ul {
+  padding: 1em;
+}
+
+.recipe li {
+  list-style-type: none;
+  font-size: 0.9rem;
+  text-align: left;
 }
