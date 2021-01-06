@@ -20,15 +20,15 @@ function App() {
   // execute getRecipe whenever query is updated
   useEffect(() => {
     getRecipe();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
 
   // fetch the data from api
   const getRecipe = async () => {
-    const res = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`);
+    const res = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await res.json();
     setRecipes(data.hits);
   }
-
 
   const handleChange = (e) => {
     setKeyword(e.target.value);
@@ -36,11 +36,12 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setQuery(keyword);
-    console.log({keyword, query});
+    setQuery(keyword)
+    console.log(query);
     setKeyword("");
   }
 
+  console.log(recipes);
     return(
       <div className="App">
         <form className="form" onSubmit={handleSubmit}>
@@ -69,9 +70,3 @@ function App() {
 }
 
 export default App
-
-// create component for search ui
-// create componet for recipe
-// fetch data once to display recipe
-  // use useEffect to fetch data once and fetch again when the query changed
-// add a functionality that will display the recipe of the name in the query
