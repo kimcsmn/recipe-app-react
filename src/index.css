@@ -1,13 +1,65 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: solid red 1px; */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: #171717;
+  color: #fef7d7;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em;
+  flex-wrap: wrap;
+}
+
+.form {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 3em;
+}
+
+.form input {
+  width: 30vw;
+}
+
+.form button {
+  border: none;
+  padding: 10px 20px;
+}
+
+.Recipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe {
+  /* border: solid 3px #17171b; */
+  background-color: #f4bc2b;
+  color: #17171b;
+  width: 350px;
+  margin: 2em;
+  text-align: center;
+  overflow: hidden;
+}
+
+.recipe-info {
+  padding: 1em 0;
+}
+
+.recipe img {
+  min-width: 100%;
+  min-height: 90%;
+  object-fit: cover;
+  object-position: bottom;
 }
