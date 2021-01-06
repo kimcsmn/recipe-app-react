@@ -38,6 +38,7 @@ body {
   border: none;
   padding: 10px 20px;
   background-color: #f4bc2b;
+  font-size: 1rem;
   color: #171717;
   border-radius: 0 1em 1em 0;
 }
@@ -53,7 +54,6 @@ body {
 }
 
 .recipe {
-  /* border: solid 3px #17171b; */
   background-color: #f4bc2b;
   color: #17171b;
   width: 350px;
@@ -79,10 +79,12 @@ body {
 
 .recipe ul {
   padding: 1em;
+  line-height: 1.75;
 }
 
 .recipe li {
   list-style-type: none;
   font-size: 0.9rem;
   text-align: left;
+  border-bottom: solid 0.02em #171717;
 }
