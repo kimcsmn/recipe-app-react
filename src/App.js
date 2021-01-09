@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Recipe from './components/Recipe';
 
 
+// Modal.setAppElement('#root')
 function App() {
 
   const APP_KEY = "8a8f88177c98615233f03555bca75607";
@@ -49,7 +50,7 @@ function App() {
           <button type="submit" >Search</button>
         </form>
 
-      {/* loop through recipes and each recipe will instantiate a Recipe component with props */}
+      {/* loop through recipes and each recipe will create an instance of Recipe component */}
       <div className="Recipe">
         {
          recipes.map(r => {

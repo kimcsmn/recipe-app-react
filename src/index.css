@@ -32,6 +32,7 @@ body {
   width: 30vw;
   height: 100%;
   border-radius: 1em 0 0 1em;
+  padding-left: 2em;
 }
 
 .form button {
@@ -56,7 +57,7 @@ body {
 .recipe {
   background-color: #f4bc2b;
   color: #17171b;
-  width: 350px;
+  width: 300px;
   height: fit-content;
   margin: 2em;
   text-align: center;
@@ -69,11 +70,12 @@ body {
 
 .recipe .image-container {
   width: 100%;
-  height: 350px;
+  height: 300px;
 }
 
 .recipe img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -87,4 +89,10 @@ body {
   font-size: 0.9rem;
   text-align: left;
   border-bottom: solid 0.02em #171717;
+}
+
+.recipe .btn {
+  margin: 1em 0;
+  /* border: none; */
+  padding: 0 1em;
 }
