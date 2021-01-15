@@ -86,5 +86,36 @@ body {
   list-style-type: none;
   font-size: 0.9rem;
   text-align: left;
-  border-bottom: solid 0.02em #171717;
+  line-height: 2;
+  /* border-bottom: solid 0.02em #171717; */
+}
+
+/* MODAL  */
+
+.modalWrapper {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  height: 80vh;
+  top: 20px;
+  background-color: #fef7d7;
+  border-radius: 1em;
+}
+
+.modal {
+  /* display: flex; */
+}
+
+.modalWrapper button {
+  width: 50%;
+  padding: 1em 1.5em;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  margin-bottom: 1em;
+  background-color: #e96c3c;
+  border: none;
+  border-radius: 1em;
 }

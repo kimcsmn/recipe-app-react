@@ -16,7 +16,6 @@ function App() {
   // state of final input
   const [query, setQuery] = useState("chicken");
 
-
   // execute getRecipe whenever query is updated
   useEffect(() => {
     getRecipe();
@@ -28,6 +27,7 @@ function App() {
     const res = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await res.json();
     setRecipes(data.hits);
+    console.log(data.hits)
   }
 
   const handleChange = (e) => {
@@ -40,6 +40,8 @@ function App() {
     console.log(query);
     setKeyword("");
   }
+
+
 
   console.log(recipes);
     return(

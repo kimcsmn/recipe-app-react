@@ -1,18 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react';
+import Modal from './Modal';
 
 function Recipe({ label, image, calories, ingredients}){
+
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = (e) => {
+    return setShowModal(!showModal)
+  }
+
   return(
     <div className="recipe">
       <div className="recipe-info">
         <h2>{label}</h2>
         <p>Calories: {Math.round(calories)}</p>
-        <ul>
-          {ingredients.map(i => {
-            return(
-              <li>{i.text}</li>
-            )
-          })}
-        </ul>
+        <button onClick={openModal}>Show More</button>
+        <Modal showModal={showModal} setShowModal={setShowModal} ingredients={ingredients} label={label}></Modal>
       </div>
       <div className="image-container">
         <img src={image} alt={label} />
