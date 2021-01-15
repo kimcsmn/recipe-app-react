@@ -8,10 +8,13 @@ function Nutrients({nutrients}) {
 
   return (
     <div className="nutrients">
-        <li>{`${fat.label}: ${Math.floor(fat.quantity)} ${fat.unit}`}</li>
-        <li>{`${protein.label}: ${Math.floor(protein.quantity)} ${protein.unit}`}</li>
-        <li>{`${carbs.label}: ${Math.floor(carbs.quantity)} ${carbs.unit}`}</li>
-        <li>{`${energy.label}: ${Math.floor(energy.quantity)} ${energy.unit}`}</li>
+       <h1>Nutrition Facts</h1>
+       <ul>
+          <li>{`${fat.label}: ${Math.floor(fat.quantity)} ${fat.unit}`}</li>
+          <li>{`${protein.label}: ${Math.floor(protein.quantity)} ${protein.unit}`}</li>
+          <li>{`${carbs.label}: ${Math.floor(carbs.quantity)} ${carbs.unit}`}</li>
+          <li>{`${energy.label}: ${Math.floor(energy.quantity)} ${energy.unit}`}</li>
+        </ul>
     </div>
   )
 }

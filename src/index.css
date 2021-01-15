@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 *,
 *::before,
@@ -10,8 +10,8 @@
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
-  background-color: #171717;
+  font-family: "Poppins", sans-serif;
+  background-color: #17171b;
   color: #fef7d7;
 }
 
@@ -87,7 +87,15 @@ body {
   font-size: 0.9rem;
   text-align: left;
   line-height: 2;
-  /* border-bottom: solid 0.02em #171717; */
+}
+
+.recipe .modalBtn {
+  background-color: #17171b;
+  color: #fef7d7;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  margin-top: 1em;
 }
 
 /* MODAL  */
@@ -96,26 +104,41 @@ body {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  width: 60vw;
-  height: 80vh;
+  width: 80vw;
+  height: 90vh;
   top: 20px;
   background-color: #fef7d7;
   border-radius: 1em;
 }
 
-.modal {
-  /* display: flex; */
+.modalTitle {
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  padding-top: 0.7em;
 }
 
 .modalWrapper button {
-  width: 50%;
+  width: 100px;
   padding: 1em 1.5em;
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
   bottom: 0;
   margin-bottom: 1em;
-  background-color: #e96c3c;
+  background-color: #17171b;
+  color: #fef7d7;
   border: none;
   border-radius: 1em;
+}
+
+.nutrients,
+.ingredients {
+  width: 50%;
+  text-align: center;
+}
+
+.modalContent {
+  display: flex;
+  padding: 1em;
 }

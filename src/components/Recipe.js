@@ -13,8 +13,7 @@ function Recipe({ label, image, calories, ingredients, nutrients, dietLabels, he
     <div className="recipe">
       <div className="recipe-info">
         <h2>{label}</h2>
-        <p>Calories: {Math.round(calories)}</p>
-        <button onClick={openModal}>Show More</button>
+        <button className="modalBtn" onClick={openModal}>Show More</button>
         <Modal showModal={showModal} setShowModal={setShowModal} ingredients={ingredients} label={label} nutrients={nutrients}></Modal>
       </div>
       <div className="image-container">

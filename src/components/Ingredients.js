@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Ingredients = ({ingredients, label}) => {
+const Ingredients = ({ingredients}) => {
   return(
-    <div>
+    <div className="ingredients">
+      <h1>Ingredients</h1>
        <ul className="modal">
-          <h3>{label} Recipe</h3>
           {ingredients.map(i => {
             return(
               <li>{i.text}</li>
