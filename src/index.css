@@ -57,7 +57,7 @@ body {
 .recipe {
   background-color: #f4bc2b;
   color: #17171b;
-  width: 300px;
+  width: 360px;
   height: fit-content;
   margin: 2em;
   text-align: center;
@@ -65,7 +65,18 @@ body {
 }
 
 .recipe-info {
-  padding: 1em 0;
+  padding: 1em 0.5em;
+  border: 2px solid #17171b;
+  margin: 20px;
+  font-size: 16px;
+  /* 100 = viewport width, as 1vw = 1/100th of that
+       Here, the body is 150% of viewport, but the container is 50%
+       of viewport, so both parents factor  into how you want it to size.
+       Let's say you like 5vw if it were the whole width,
+       then for this container, size it at 3.75vw
+       (5 * 1.5 [i.e. 150%]) * .5 [i.e. 50%]
+    */
+  font-size: 1vw;
 }
 
 .recipe .image-container {
@@ -91,13 +102,20 @@ body {
   line-height: 2;
 }
 
-.recipe .modalBtn {
+.modalBtn {
   background-color: #17171b;
   color: #fef7d7;
   border: none;
   border-radius: 1em;
   padding: 0.5em 1em;
   margin-top: 1em;
+  transition: 0.2s all ease-in;
+}
+
+.modalBtn:hover {
+  background-color: #fef7d7;
+  color: #17171b;
+  font-weight: 700;
 }
 
 /* MODAL  */
@@ -111,13 +129,15 @@ body {
   top: 20px;
   background-color: #fef7d7;
   border-radius: 1em;
+  border: solid 5px #17171b;
 }
 
 .modalTitle {
   text-align: center;
   width: 100%;
   font-size: 2rem;
-  padding-top: 0.7em;
+  padding: 0.7em 0;
+  border-bottom: 5px solid #17171b;
 }
 
 .modalWrapper button {
@@ -137,6 +157,7 @@ body {
 .nutrients,
 .ingredients {
   width: 50%;
+  height: 100%;
   text-align: center;
 }
 
