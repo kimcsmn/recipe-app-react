@@ -62,6 +62,9 @@ function App() {
              image={r.recipe.image}
              ingredients={r.recipe.ingredients}
              calories={r.recipe.calories}
+             nutrients={r.recipe.totalNutrients}
+             dietLabels={r.recipe.dietLabels}
+             healthLabels={r.recipe.healthLabels}
            />
            )
          })

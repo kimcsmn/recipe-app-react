@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Modal from './Modal';
 
-function Recipe({ label, image, calories, ingredients}){
+function Recipe({ label, image, calories, ingredients, nutrients, dietLabels, healthLabels}){
 
   const [showModal, setShowModal] = useState(false)
 
@@ -15,7 +15,7 @@ function Recipe({ label, image, calories, ingredients}){
         <h2>{label}</h2>
         <p>Calories: {Math.round(calories)}</p>
         <button onClick={openModal}>Show More</button>
-        <Modal showModal={showModal} setShowModal={setShowModal} ingredients={ingredients} label={label}></Modal>
+        <Modal showModal={showModal} setShowModal={setShowModal} ingredients={ingredients} label={label} nutrients={nutrients}></Modal>
       </div>
       <div className="image-container">
         <img src={image} alt={label} />
