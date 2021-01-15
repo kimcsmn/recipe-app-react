@@ -1,9 +1,11 @@
 import React from 'react'
+import Ingredients from './Ingredients'
 
 function Modal({showModal, setShowModal, ingredients, label}) {
 
   return (
     <>
+    <Ingredients ingredients={ingredients} label={label}/>
     {showModal ? (
     <div className="modalWrapper">
       <ul className="modal">
