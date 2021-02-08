@@ -4,10 +4,10 @@ const Ingredients = ({ingredients}) => {
   return(
     <div className="ingredients">
       <h1>Ingredients</h1>
-       <ul className="modal">
+       <ul className="modal" >
           {ingredients.map(i => {
             return(
-              <li>{i.text}</li>
+              <li key={Math.random() * 100}>{i.text}</li>
             )
           })}
       </ul>

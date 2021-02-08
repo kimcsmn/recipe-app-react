@@ -2,7 +2,7 @@ import React from 'react'
 import Ingredients from './Ingredients'
 import Nutrients from './Nutrients'
 
-function Modal({showModal, setShowModal, ingredients, label, nutrients, dietLabels, healthLabels}) {
+function Modal({showModal, setShowModal, ingredients, label, nutrients}) {
 
   return (
     <>

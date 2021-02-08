@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Recipe from './components/Recipe';
 
-
-// Modal.setAppElement('#root')
 function App() {
 
   const APP_KEY = "8a8f88177c98615233f03555bca75607";
@@ -28,7 +26,6 @@ function App() {
     const res = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await res.json();
     setRecipes(data.hits);
-    console.log(data.hits)
   }
 
   const handleChange = (e) => {
@@ -38,13 +35,9 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setQuery(keyword)
-    console.log(query);
     setKeyword("");
   }
 
-
-
-  console.log(recipes);
     return(
       <div className="App">
         <form className="form" onSubmit={handleSubmit}>
@@ -52,7 +45,6 @@ function App() {
           <button type="submit" >Search</button>
         </form>
 
-      {/* loop through recipes and each recipe will create an instance of Recipe component */}
       <div className="Recipe">
         {
          recipes.map(r => {
@@ -64,8 +56,6 @@ function App() {
              ingredients={r.recipe.ingredients}
              calories={r.recipe.calories}
              nutrients={r.recipe.totalNutrients}
-             dietLabels={r.recipe.dietLabels}
-             healthLabels={r.recipe.healthLabels}
            />
            )
          })
