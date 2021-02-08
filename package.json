@@ -1,6 +1,6 @@
 {
   "name": "recipe-app-react",
-  "homepage": "http://kimcsmn.github.io/recipe-react-app",
+  "homepage": "http://kimcsmn.github.io/recipe-app-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
