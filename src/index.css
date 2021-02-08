@@ -171,3 +171,63 @@ body {
   /* border: none; */
   padding: 0 1em;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+  .form input {
+    width: 50vw;
+    height: 100%;
+    border-radius: 1em 0 0 1em;
+    padding-left: 2em;
+  }
+  .Recipe {
+    display: flex;
+    flex-direction: column;
+  }
+  .recipe {
+    height: 450px;
+  }
+
+  .modalWrapper {
+    overflow: scroll;
+    margin-bottom: 1em;
+  }
+
+  .modalTitle {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .modalContent {
+    display: flex;
+    padding: 0.5em;
+    flex-direction: column;
+  }
+
+  .modalWrapper button {
+    width: 100px;
+    padding: 1em 1.5em;
+    display: block;
+    position: relative;
+    /* position: absolute; */
+    /* transform: translateX(-50%);
+    left: 50%;
+    bottom: 0%; */
+  }
+
+  .nutrients,
+  .ingredients {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .modalContent h1 {
+    font-size: 16px;
+  }
+
+  .modalContent ul li {
+    font-size: 12px;
+  }
+}
